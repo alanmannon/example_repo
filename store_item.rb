@@ -9,8 +9,19 @@ class Produce
     @color = color
     @aisle = aisle
   end
+
+  def instock(currently_in_stock)
+    @instock = currently_in_stock
+  end
 end
 
-p Produce.new("bread", 3, "white", 2)
-p Produce.new("gasoline", 2, "orange", 3)
-p Produce.new("computer", 1500, "black", 15)
+bread = Produce.new("bread", 3, "white", 2)
+gasoline = Produce.new("gasoline", 2, "orange", 3)
+computer = Produce.new("computer", 1500, "black", 15)
+
+p bread
+p gasoline
+p computer
+
+bread.instock("yes")
+p bread
